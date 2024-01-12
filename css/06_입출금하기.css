@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer{
+    border: 2px solid black;
+    width: 500px;
+    height: 400px;
+
+}
+
+.mainContainer > .row{
+    border: 1px solid black;
+    height: 33%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomContainer > .bottomButton{
+    margin: 0px 30px;
+    padding: 0px 30px;
+}
