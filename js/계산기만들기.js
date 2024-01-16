@@ -1,5 +1,5 @@
 // ---------------------------------
-let numbers = [0,0]; // 처음 입력받는 수(Number)
+let numbers = ["0","0"]; // 처음 입력받는 수(Number)
 let a2 = ""; // 처음 입력받는 수 (화면에 띄우는 String)
 let a3 = 0; // 처음 입력받는 수를 임시저장소(Number)
 let i = 0; // 입력받을 수 구분하는 수
@@ -8,10 +8,9 @@ let totalMiddle = document.getElementById("total"); // 첫 수 화면과 연결
 
 function num(number){
     var conNumber = Number(number);
-    numbers[i] += conNumber;
+    numbers[i] += number;
     a2 += conNumber;
     totalMiddle.textContent = a2;
-    
 }
 
 function middle(sym){
@@ -21,8 +20,10 @@ function middle(sym){
         i++;
     }
 
-    totalMiddle.textContent = "";
-    a2 = "";
+    if(totalMiddle != ""){
+        totalMiddle.textContent = "";
+        a2 = "";
+    }
 
 
 }
@@ -32,26 +33,25 @@ function result(){
     let sum = 0;
     let total = document.getElementById("total");
 
+    let num1 = parseInt(numbers[0]);
+    let num2 = parseInt(numbers[1]);
+
     if(word == '+'){
-        sum = numbers[0] + numbers[1]; 
+        sum = num1 + num2; 
     }else if(word == '-'){
-        sum = numbers[0] - numbers[1];  
+        sum = num1 - num2;  
     }else if(word == '*'){
-        sum = numbers[0] * numbers[1]; 
+        sum = num1 * num2; 
     }else if(word == '/'){
-        sum = numbers[0] / numbers[1]; 
+        sum = num1 / num2; 
     }else if(word == '%'){
-        sum = numbers[0] % numbers[1]; 
+        sum = num1 % num2; 
     }
+
     total.innerText = sum;
+    numbers[0] = sum; // 계산 후 결과값이 다시 계산되는 첫 요소로 결정
+    i = 1; // 만약 지우기가 있다면 if/else if로 다시 처음부터 시작할지 결정
 }
-
-
-/* 
-    let a;
-
-*/
-
 
 
 

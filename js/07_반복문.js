@@ -158,7 +158,122 @@ function executeFn3(){
     }
   }
 
+  function check10(){
+    for(let x = 5; x >= 1; x--){
+        console.log(x);
+    }
+  }
 
+  function check11(){
+      for(let row = 5; row >=1; row-- ){
+        let str = ""
+        for(let col = 1; col <= row; col++){
+            str += col;
+        }
+        console.log(str);
+    }
+  }
+
+  // if, for문 내에 코드가 한 줄만 있다면 {} 생략 가능
+  function check12(){
+    for(let a = 1; a<=3; a++){
+        let str = "";
+        for(let b = 1; b <= a; b++){
+            str += b;
+        }
+        console.log(str);
+    }
+
+    for(let a = 4; a >= 1; a--){
+        let str= "";
+        for(let b = 1; b <= a; b++){
+            str += b;
+        }
+        console.log(str);
+    }
+
+
+    console.log("----------------------------------");
+
+    for(let row = 1; row <= 7; row++){
+
+        let end = 0;
+        if(row <= 4) end = row;
+        else end = 8 - row;
+        
+
+
+        let str = "";
+        
+        for(let col = 1 ; col <= end; col++){         
+            str+=col;
+        }
+        console.log(str);
+    }
+  }
+
+
+  function check13(){
+    let c = 1;
+    for(let a = 1; a <=3; a++){
+        let str = "";
+        for(let b = 1; b <= 4; b++){
+            str += c + " ";
+            c++;
+        }
+        console.log(str);
+    }
+  }
+
+  function check14(){
+    const num1 = Number(document.getElementById("input14").value)
+    const result = document.getElementById("result14");
+    let count = 0;
+
+    for(let a = 1; a <= 100; a++){
+        if(a%num1 == 0) count++;
+    }
+
+    result.innerHTML = `3의 배수 : ${count} 개`;
+  }
+
+  function check15(){
+
+    let count = 0;
+
+    for(let row = 1; row<=7; row++){
+
+        if(row <=4) count++;
+        else count--;
+
+        let str = "";
+        for(let col = 1; col <= count; col++){
+            str += col;
+        }
+        console.log(str);
+    }
+  }
+
+  /* while문 확인 */
+  function check16(){
+
+    /* 동일 비교 연산자 */
+    // !== -> 값, 자료형이 모두 다른 경우 true
+    // === -> 값, 자료형이 모두 같은 경우 true
+
+    let val; // 변수를 선언만 하기 (undefined)
+
+    // 취소를 누르기 전 까지 반복
+    // == 취소를 누르면 반복하지 않겠다
+    while(val !== null){
+        val = prompt("입력 후 확인"); // 변수에 prompt 값 대입
+        // 확인 -> 입력한 값
+        // 취소 -> null
+
+        console.log(val);
+    }
+
+  }
 
 // 요소.innerText "문자열";      ul.innerHTML  = " ";
 // -> 요소의 내용으로 문자열을 대입
@@ -168,3 +283,70 @@ function executeFn3(){
 // 요소.innerHTML = "<h2>문자열</h2>"
 // -> 요소의 내용으로 준자열을 대입
 //    (HTML 태그를 해석해서 화면에 출력)
+
+
+/* 메뉴 주문하기 */
+function check17(){
+
+    // 메뉴 가격
+    const gimbap = 3000;
+    const ramen = 3500;
+    const donkkas = 5000;
+
+    // 주문 개수 카운트
+    let gCount = 0;
+    let rCount = 0;
+    let dCount = 0;
+
+    // prompt로 입력한 값을 저장할 변수 선언
+    let input; 
+
+    while(input !== null){ // 취소 누르기 전까지 반복
+         
+        input = prompt("메뉴 번호를 입력하세요!!");
+
+        switch(input){
+            case '1' : gCount++; break;
+            case '2' : rCount++; break;
+            case '3' : dCount++; break;
+            case null : alert("주문 완료!"); break;
+            
+            default : alert("메뉴에 작성된 번호만 입력해주세요"); break;
+        }
+
+    }
+
+    alert(`김밥 : ${gCount}, 라면 : ${rCount}, 돈까스 : ${dCount}`);
+
+    let sum = (gCount * gimbap) + (rCount * ramen) + (dCount*donkkas);
+    
+    alert(`총 가격 : ${sum} 원`);
+}
+
+
+function check18(){
+
+    // 1부터 10까지 출력
+/*     for(let a = 1; a < 11; a++){
+        console.log(a);
+    } */
+    
+    let a = 1; 
+    while(a < 11){
+        console.log(a);
+        a++;
+    }
+
+    console.log("---------------------------");
+
+    let b = 10;
+    while(b >= 1){
+        console.log(b);
+        b--;
+    }
+
+}
+
+
+
+
