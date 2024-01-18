@@ -60,7 +60,10 @@ function nameTest(){
     for(let i = 0; i < tagList.length; i++){
         // tagList[i].innerText : 작성된 내용 얻어오기
         // tagList[i].innerText = "abc" : 내용으로 "abc" 대입하기
-        
+
         console.log(tagList[i].innerText);
+        // 반복중 현재 선택된 요소의 배경색을
+        // 작성된 내용과 똑같은 색으로 변경
+        tagList[i].style.backgroundColor = tagList[i].innerText;
     }
 }
