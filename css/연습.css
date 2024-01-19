@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 300px;
+}
+
+.x{
+    width: 20%;
+    height: 100px;
+}
