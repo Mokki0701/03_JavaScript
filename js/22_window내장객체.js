@@ -55,3 +55,53 @@ stop3.addEventListener("click", ()=>{
     start3.disabled = false;
 })
 
+/* 팝업창 열기 */
+const openPopup1 = document.querySelector("#openPopup1");
+
+openPopup1.addEventListener("click", ()=>{
+  window.open("23_스톱워치.html");
+
+
+})
+
+/* 진짜 팝업창으로 열기 */
+const openPopup2 = document.querySelector("#openPopup2");
+
+openPopup2.addEventListener("click", () => {
+  window.open("23_스톱워치.html", "_blank", "popup");
+});
+
+/* 팝업창 + 옵션 */
+const openPopup3 = document.querySelector("#openPopup3");
+
+openPopup3.addEventListener("click", () => {
+  let options = [];
+  options.push("width=400");
+  options.push("height=600");
+
+  /* 팝업창 띄우는 위치를 지정 */
+  // 단, 메인 모니터에서만 적용됨
+  options.push("letf=400");
+  options.push("top=100");
+
+  // 배열명.toString() : "요소,요소,요소"
+  // -> 배열 내 요소를 ,를 구분자로 한 하나의 문자열로 변환
+
+  window.open("23_스톱워치.html", "_blank", options.toString());
+});
+
+// 배열/객체.toString() : 모든 요소를 하나의 문자열로 바꾸어라
+
+/* 팝업창(자식)이 부모창의 값을 읽고/쓰기 */
+const openPopup4 = document.querySelector("#openPopup4");
+
+openPopup4.addEventListener("click", ()=>{
+  const options = [];
+
+  options.push("width=600");
+  options.push("height=300");
+  options.push("left=500");
+  options.push("top=100");
+
+  window.open("22_팝업창.html", "_blank", options.toString());
+})

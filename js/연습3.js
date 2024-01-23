@@ -5,15 +5,6 @@ const recordBtn = document.querySelector("#recordBtn");
 const resetBtn = document.querySelector("#resetBtn");
 const recordContainer = document.querySelector("#recordContainer");
 
-function Time(a,b,c){
-    this.a = a;
-    this.b = b;
-    this.c = c;
-
-    this.time = function(){
-        return `${a} : ${b} . ${c}`;
-    }
-}
 
 const timeList = [];
 
@@ -86,6 +77,6 @@ resetBtn.addEventListener("click", ()=>{
 })
 
 recordBtn.addEventListener("click", function(e){
-    timeList.push(new Time(list[0], list[1], list[2]));
-    recordContainer.innerText += 
+
+
 })
