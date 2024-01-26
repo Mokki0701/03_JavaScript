@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid black;
+}
+
+main{
+    width: 500px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topContainer{
+    height: 20%;
+    
+    display: flex;
+}
+
+.topLeft{
+    width: 20%;
+}
+
+#resName{
+    display: block;
+
+    cursor: pointer;
+}
+
+#nameInput{
+    display: none;
+}
+
+.midContainer{
+    height: 60%;
+}
+
+.menuList{
+    display: flex;
+}
+
+.menuList2{
+    display: flex;
+}
+
+/* x버튼 */
+.remove{
+    width: 15px;
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+
+.botContainer{
+    height: 20%;
+
+    display: flex;
+    flex-direction: row-reverse;
+}

@@ -10,13 +10,6 @@ winButton.addEventListener("click",()=>{
 
     var bingo = createBingo(su2, su);
     var result = createResult(su3,su2,su);
-    
-        for(let i = 0; i < win.value; i++){
-            for(let j = 0; j < su2; j++){
-            console.log(result[i][j]);
-            }
-        }
-    
 
     for(let i = 0; i < kan.value; i++){
         const number2 = document.createElement("div");
